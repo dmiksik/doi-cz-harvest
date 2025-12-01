@@ -13,5 +13,4 @@ data/raw/*ror-data*
 # velké meziprodukty, pokud nechceš verzovat
 *.log
 *.tmp
-requirements.txt
 data/processed/datasets_dedup.jsonl
