@@ -51,7 +51,7 @@ Harvest datasets with CZ affiliations from DataCite & Crossref:
 
 ```bash
 python harvest_cz_dataset.py \
-  --ror-dump v1.74-2025-11-24-ror-data_schema_v2.json \
+  --data/raw/ror-dump v1.74-2025-11-24-ror-data_schema_v2.json \
   --out-dir ./cz_datasets
 ```
 
