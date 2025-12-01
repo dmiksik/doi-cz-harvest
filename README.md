@@ -1,5 +1,3 @@
-Tady máš hotový návrh `README.md`, který můžeš jen zkopírovat do repa a případně lehce doladit názvy souborů, pokud se něco jmenuje jinak.
-
 ````markdown
 # DOI CZ Harvest
 
