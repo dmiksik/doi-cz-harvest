@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# virtuální prostředí
+venv/
+.env/
+
+# raw data (sem si dosaď aktuální cesty, pokud máš nějaké raw dumps)
+data/cz_datasets/
+data/raw/*ror-data*
+
+# velké meziprodukty, pokud nechceš verzovat
+*.log
+*.tmp
+requirements.txt
+data/processed/datasets_dedup.jsonl
