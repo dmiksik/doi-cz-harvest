@@ -50,7 +50,9 @@ pip install -r requirements.txt
 Harvest datasets with CZ affiliations from DataCite & Crossref:
 
 ```bash
-python scripts/harvest_cz_dataset.py -h
+python harvest_cz_dataset.py \
+  --ror-dump v1.74-2025-11-24-ror-data_schema_v2.json \
+  --out-dir ./cz_datasets
 ```
 
 Typical outputs:
