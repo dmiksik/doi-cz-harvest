@@ -1,4 +1,3 @@
-````markdown
 # DOI CZ Harvest
 
 Scripts and a small web app for harvesting, deduplicating, and exploring DOIs of **datasets** produced by research organisations in the Czech Republic.
