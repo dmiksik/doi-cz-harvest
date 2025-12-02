@@ -1,6 +1,7 @@
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
+import os
 import json
 import csv
 
@@ -14,8 +15,9 @@ INST_PATH = PROCESSED_DIR / "institutions.tsv"
 DEDUP_PATH = PROCESSED_DIR / "datasets_dedup.jsonl"
 
 TIMELINE_PATH = ANALYSIS_DIR / "timeline.tsv"
-ORCID_COVERAGE_PATH = ANALYSIS_DIR / "orcid_coverage.json"
-LICENSE_SUMMARY_PATH = ANALYSIS_DIR / "license_dataset_summary.json"
+ORCID_PATH = ANALYSIS_DIR / "orcid_coverage.json"
+LICENSE_PATH = ANALYSIS_DIR / "license_dataset_summary.json"
+LICENSE_SUMMARY_PATH = LICENSE_PATH
 
 app = FastAPI()
 
