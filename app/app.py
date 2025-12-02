@@ -1,19 +1,21 @@
+from pathlib import Path
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 import json
-import os
+import csv
 
-# Cesty k souborům – můžeš upravit podle své struktury
-DATA_DIR = "processed"
-ANALYSIS_DIR = "analysis"
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+PROCESSED_DIR = DATA_DIR / "processed"
+ANALYSIS_DIR = DATA_DIR / "analysis"
 
-SUMMARY_PATH = os.path.join(DATA_DIR, "summary_stats.json")
-INST_PATH = os.path.join(DATA_DIR, "institutions.tsv")
-DEDUP_PATH = os.path.join(DATA_DIR, "datasets_dedup.jsonl")
+SUMMARY_PATH = PROCESSED_DIR / "summary_stats.json"
+INST_PATH = PROCESSED_DIR / "institutions.tsv"
+DEDUP_PATH = PROCESSED_DIR / "datasets_dedup.jsonl"
 
-TIMELINE_PATH = os.path.join(ANALYSIS_DIR, "timeline.tsv")
-ORCID_PATH = os.path.join(ANALYSIS_DIR, "orcid_coverage.json")
-LICENSE_SUMMARY_PATH = os.path.join(ANALYSIS_DIR, "license_dataset_summary.json")
+TIMELINE_PATH = ANALYSIS_DIR / "timeline.tsv"
+ORCID_COVERAGE_PATH = ANALYSIS_DIR / "orcid_coverage.json"
+LICENSE_SUMMARY_PATH = ANALYSIS_DIR / "license_dataset_summary.json"
 
 app = FastAPI()
 
