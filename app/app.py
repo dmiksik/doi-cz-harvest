@@ -19,7 +19,7 @@ MODE_CONFIGS = {
     "doi": {
         "label": "DOI (všechny verze včetně Zenodo)",
         "dedup_path": PROCESSED_DIR / "datasets_dedup.jsonl",
-        "inst_tsv": PROCESSED_DIR / "institutions.tsv",
+        "inst_tsv": PROCESSED_DIR / "institutions_doi.tsv",
         "orcid_path": ANALYSIS_DIR / "orcid_coverage.json",
         "license_path": ANALYSIS_DIR / "license_dataset_summary.json",
         "summary_path": PROCESSED_DIR / "summary_stats.json",
@@ -28,7 +28,7 @@ MODE_CONFIGS = {
     "concepts": {
         "label": "Zenodo – jen kanonické DOI",
         "dedup_path": PROCESSED_DIR / "datasets_dedup_zenodo_concepts.jsonl",
-        "inst_tsv": CONCEPTS_ANALYSIS_DIR / "orcid_by_institution.tsv",
+        "inst_tsv": PROCESSED_DIR / "institutions_zenodo_concepts.tsv",
         "orcid_path": CONCEPTS_ANALYSIS_DIR / "orcid_coverage.json",
         "license_path": CONCEPTS_ANALYSIS_DIR / "license_dataset_summary.json",
         "summary_path": None,  # dopočítáme z DOI summary + concept dat
