@@ -323,17 +323,17 @@ HTML_PAGE = """
   </style>
 </head>
 <body>
-  <h1>CZ datasets (DataCite + Crossref)</h1>
+  <h1>CZ DOI-assigned datasets (DataCite + Crossref)</h1>
 
   <div id="mode-toggle">
-    Zobrazení:
+    View:
     <label>
       <input type="radio" name="mode" value="doi" checked>
-      DOI (všechny verze včetně Zenodo)
+      Zenodo - all versions
     </label>
     <label>
       <input type="radio" name="mode" value="concepts">
-      Zenodo – jen kanonické DOI
+      Zenodo – concept DOIs only
     </label>
   </div>
 
@@ -345,30 +345,30 @@ HTML_PAGE = """
 
   <div id="layout">
     <div>
-      <h2>Instituce</h2>
+      <h2>Institution</h2>
       <table id="inst-table">
         <thead>
-          <tr><th>Instituce</th><th>Datasety</th><th>Autoři</th></tr>
+          <tr><th>Instituion</th><th>Datasets</th><th>Authors</th></tr>
         </thead>
         <tbody></tbody>
       </table>
     </div>
     <div>
-      <h2 id="inst-title">Detail instituce</h2>
+      <h2 id="inst-title">Institution detail</h2>
       <div id="year-filter" style="margin-bottom: 0.5rem; font-size: 14px;">
         <label>
-          Rok od
+          Year from
           <input id="year-from" type="number" value="2020" style="width: 5rem; margin-right: 0.5rem;">
         </label>
         <label>
-          do
+          to
           <input id="year-to" type="number" value="2025" style="width: 5rem; margin-right: 0.5rem;">
         </label>
-        <button type="button" id="year-filter-apply">Filtrovat</button>
+        <button type="button" id="year-filter-apply">Apply filter</button>
       </div>
       <table id="ds-table">
         <thead>
-          <tr><th>DOI</th><th>Název</th><th>Rok</th><th>Zdroj</th></tr>
+          <tr><th>DOI</th><th>Title</th><th>Year</th><th>Source</th></tr>
         </thead>
         <tbody></tbody>
       </table>
@@ -531,7 +531,7 @@ async function loadInstitutionDetail(ror_id, name) {
     currentInstitutionName = name;
     currentInstitutionDatasets = data.datasets || [];
 
-    document.getElementById('inst-title').textContent = `Detail instituce: ${name}`;
+    document.getElementById('inst-title').textContent = `Institution: ${name}`;
 
     renderInstitutionDatasets();
   } catch (err) {
